@@ -2,12 +2,43 @@
 
 <div class="col-md-3">
 <h3><%= @place.name %></h3>
-<p><%= @place.address %></p>
-<p><%= @place.phone %></p>
-<p><%= @place.website %></p>
-<p><%= @place.description %></p> 
+<p>
+<strong>Address</strong>
+<%= @place.address %>
+</p>
+
+<p>
+<strong>Phone</strong>
+
+<%= @place.phone %>
+
+</p>
+
+<p>
+<strong>Website</strong>
+
+<%= @place.website %>
+
+</p>
+
+<p>
+<strong>Description</strong>
+
+<%= @place.description %>
+
+</p> 
+
+<div id="map-canvas" style="width: 230px; height: 230px"></div>
+
 
 </div>
+
+<div class="col-md-9">
+
+<h3>Reviews by People</h3>
+
+</div>
+
 </div>
 
 <div id="map-canvas" style="width: 230px; height: 230px"></div>
