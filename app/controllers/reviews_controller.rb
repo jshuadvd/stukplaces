@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-  	@review = current_user.review.new(review_params)
+  	@review = current_user.reviews.new(review_params)
 
   	respond_to do |format|
   		if @review.save
