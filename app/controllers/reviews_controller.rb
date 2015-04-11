@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
   		if @review.save
   			format.html { redirect_to place_path(@review.place), notice: 'Review was successfully created.' }
   		else
-  			redirect_to place_path(@review.place), notice: 'Something went wrong!'
+  			redirect_to place_path(@review.place), notice: "Something went wrong!"
   		end
   	end
   end
@@ -20,10 +20,10 @@ class ReviewsController < ApplicationController
   def update
   	respond_to do |format|
   		if @review.update(review_params)
-  			format.html { place_path(@review.place), notice: 'Review was successfully updated.' }
+  			format.html { redirect_to place_path(@review.place), notice: 'Review was successfully updated.' }
   		else
   			format.html { render :edit }
-  			redirect_to place_path(@review.place), notice: 'Something went wrong!'	      
+  			redirect_to place_path(@review.place), notice: "Something went wrong!"	      
   		end
   	end
   end
@@ -31,7 +31,7 @@ class ReviewsController < ApplicationController
   def destroy
   	@review.destroy
   	respond_to do |format|
-  		format.html { place_path(@review.place), notice: 'Review was successfully destroyed.' }
+  		format.html { redirect_to place_path(@review.place), notice: 'Review was successfully destroyed.' }
   	end  
   end
 
