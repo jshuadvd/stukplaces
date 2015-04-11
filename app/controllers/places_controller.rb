@@ -10,6 +10,7 @@ class PlacesController < ApplicationController
   end
 
   def show
+    @reviews = @place.reviews
     @review = Review.new
   end
 
